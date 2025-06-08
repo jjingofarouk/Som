@@ -1,5 +1,9 @@
 import { User } from './types';
 
+interface RegisterFormData extends Partial<User> {
+  password?: string;
+}
+
 export async function login(email: string, password: string): Promise<User> {
   const response = await fetch('http://localhost:8000/api/users/login/', {
     method: 'POST',
@@ -10,7 +14,7 @@ export async function login(email: string, password: string): Promise<User> {
   return response.json();
 }
 
-export async function register(data: Partial<User>): Promise<User> {
+export async function register(data: RegisterFormData): Promise<User> {
   const response = await fetch('http://localhost:8000/api/users/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
