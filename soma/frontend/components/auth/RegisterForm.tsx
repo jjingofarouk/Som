@@ -84,8 +84,8 @@ export default function RegisterForm() {
         </label>
         <input
           type="text"
-          id="last_name"
           name="last_name"
+          id="last_name"
           value={formData.last_name}
           onChange={handleChange}
           className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
@@ -100,3 +100,18 @@ export default function RegisterForm() {
           id="role"
           value={formData.role}
           onChange={handleChange}
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+        >
+          <option value="learner">Learner</option>
+          <option value="instructor">Instructor</option>
+        </select>
+      </div>
+      <button
+        type="submit"
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+      >
+        Register
+      </button>
+    </form>
+  );
+}
