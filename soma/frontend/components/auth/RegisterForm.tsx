@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { register } from '../../lib/auth';
+import { User } from '../../lib/types';
 
 export default function RegisterForm() {
   const router = useRouter();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Partial<User>>({
     email: '',
     password: '',
     first_name: '',
