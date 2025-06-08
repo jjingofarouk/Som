@@ -20,7 +20,7 @@ export default function RegisterForm() {
     try {
       await register(formData);
       router.push('/dashboard');
-    } catch (err) {
+    } catch {
       setError('Registration failed');
     }
   };
