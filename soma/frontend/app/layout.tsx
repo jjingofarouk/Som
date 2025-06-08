@@ -1,5 +1,5 @@
 // app/layout.tsx
-import './globals.css'; // Correct path for App Router
+import '../styles/globals.css'; // Correct path for App Router
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 import Header from '@/components/common/Header'; // Use alias for cleaner imports
