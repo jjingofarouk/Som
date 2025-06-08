@@ -7,7 +7,7 @@ import { User } from '../../lib/types';
 
 export default function RegisterForm() {
   const router = useRouter();
-  const [formData, setFormData] = useState<Partial<User>>({
+  const [formData, setFormData] = useState<User>({
     email: '',
     password: '',
     first_name: '',
