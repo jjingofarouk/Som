@@ -17,7 +17,7 @@ export default function LoginForm() {
     try {
       await login(formData.email, formData.password);
       router.push('/dashboard');
-    } catch (err) {
+    } catch {
       setError('Invalid credentials');
     }
   };
